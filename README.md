@@ -25,22 +25,12 @@ Cada nodo muestra información detallada sobre los distribuidores:
 ![Tarjeta de Detalles](/public/detail_card.png)
 
 ### 🧭 **Características de Navegación**
-- **Navegación por Migas de Pan**: Rastrea tu posición en la jerarquía del árbol
+- **Navegación por Breadcrumbs**: Rastrea tu posición en la jerarquía del árbol
 - **Navegación Padre/Hijo**: Navega hacia arriba y abajo en la estructura del árbol
 - **Reinicio a Raíz**: Retorno rápido al distribuidor de nivel superior
 - **Seguimiento de Historial**: Mantiene el historial de navegación para retroceder fácilmente
 
-### 📱 **Optimización para Móviles**
-- **Niveles Adaptativos**: Muestra menos niveles en dispositivos móviles (3 vs 5 en escritorio)
-- **Interacciones Táctiles**: Optimizado para interacciones táctiles
-- **Diseño Responsivo**: Ajusta el diseño del árbol para pantallas más pequeñas
-- **Vistas Colapsables**: Alterna entre vistas compactas y detalladas
 
-### 🎨 **Mejoras Visuales**
-- **Codificación de Colores**: Diferentes colores para estado activo y niveles de volumen
-- **Efectos de Hover**: Retroalimentación interactiva en las interacciones de nodos
-- **Detalles Modales**: Ventana emergente con información detallada para cada distribuidor
-- **Animaciones Suaves**: Transiciones fluidas y estados de carga
 
 ![Vista Alternativa](/public/home_2.png)
 
@@ -96,43 +86,6 @@ npm run build
 - **Tocar**: Toca los nodos para ver detalles
 - **Vista Compacta**: Automáticamente muestra menos niveles para una mejor experiencia móvil
 
-## Detalles Técnicos
-
-### Arquitectura
-- **Framework Frontend**: JavaScript Vanilla con módulos ES6
-- **Estilos**: Tailwind CSS con CSS personalizado
-- **Herramienta de Construcción**: Vite para desarrollo y construcción rápidos
-- **Estructura de Datos**: Datos de árbol jerárquico basados en JSON
-
-### Optimizaciones de Rendimiento
-- **Limitación de Niveles**: Previene renderizar demasiados niveles a la vez
-- **Carga Perezosa**: Solo renderiza secciones visibles del árbol
-- **Delegación de Eventos**: Manejo eficiente de eventos para árboles grandes
-- **Renderizado Responsivo**: Se adapta al renderizado basado en el tamaño de pantalla
-
-### Estructura de Datos
-La aplicación espera datos JSON con la siguiente estructura:
-```json
-{
-  "data": {
-    "type": "distributors",
-    "attributes": [
-      {
-        "distributor_id": 12345,
-        "username": "distributor.12345",
-        "full_name": "Juan Pérez",
-        "status": "Active",
-        "product_name": "Light Miner",
-        "category_name": "Bitcoin",
-        "num_children": 10,
-        "binary_placement": "Left",
-        "parent_username": "distributor.12344",
-        "children": [...]
-      }
-    ]
-  }
-}
-```
 
 ## Capturas de Pantalla
 
@@ -148,69 +101,9 @@ La aplicación espera datos JSON con la siguiente estructura:
 ![Vista Alternativa](/public/home_2.png)
 *Diferente perspectiva del árbol mostrando la estructura jerárquica de distribuidores.*
 
-## Compatibilidad de Navegadores
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
-
-## Características Destacadas
-
-### 🎨 **Diseño Moderno**
-- Gradientes atractivos y efectos de cristal (glassmorphism)
-- Animaciones suaves y transiciones fluidas
-- Paleta de colores profesional y accesible
-
-### 📱 **Experiencia Móvil Optimizada**
-- Diseño completamente responsivo
-- Interacciones táctiles optimizadas
-- Niveles adaptativos según el tamaño de pantalla
-
-### ⚡ **Rendimiento Optimizado**
-- Renderizado eficiente de grandes árboles
-- Carga perezosa de datos
-- Navegación fluida sin retrasos
-
-### 🔍 **Funcionalidades Avanzadas**
-- Búsqueda y filtrado de distribuidores
-- Exportación de datos
-- Historial de navegación
-
-## Contribuir
-
-1. Haz un fork del repositorio
-2. Crea una rama de características
-3. Realiza tus cambios
-4. Prueba exhaustivamente
-5. Envía una solicitud de pull
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT.
-
 ## Soporte
 
 Para preguntas o problemas, por favor crea un issue en el repositorio o contacta al equipo de desarrollo.
 
 ---
 
-**Nota**: Esta aplicación está diseñada específicamente para visualizar la red de distribuidores de la empresa Daxcsa y puede necesitar modificaciones para otros casos de uso.
-
-## Tecnologías Utilizadas
-
-- **Frontend**: JavaScript ES6+, HTML5, CSS3
-- **Framework CSS**: Tailwind CSS
-- **Herramienta de Construcción**: Vite
-- **Gestión de Paquetes**: npm
-- **Control de Versiones**: Git
-
-## Estado del Proyecto
-
-✅ **Completado**: Visualización básica del árbol  
-✅ **Completado**: Navegación interactiva  
-✅ **Completado**: Diseño responsivo  
-✅ **Completado**: Optimización para móviles  
-✅ **Completado**: Interfaz moderna con Tailwind CSS  
-🔄 **En Desarrollo**: Funcionalidades adicionales  
-📋 **Planificado**: Exportación de datos  
-📋 **Planificado**: Búsqueda avanzada
